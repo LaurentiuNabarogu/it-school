@@ -1,9 +1,10 @@
 package com.itschool.session11.homework.ex3;
-
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         /*
         Create:
         -2 empty ArrayLists: studentList and graduateStudentList
@@ -14,15 +15,13 @@ public class Main {
         ArrayList<String> studentList = new ArrayList<>();
         ArrayList<String> graduateStudentList = new ArrayList<>();
 
-        String[] students = {"Ion","Vasile","Carina", "Miruna", "Laurentiu", "Cosmin", "Gheorghe", "Viorel","Tatiana","Nina"};
-        for (String student : students){
-            studentList.add(student);
-        }
-
+        String[] students = {"Ion", "Vasile", "Carina", "Miruna", "Laurentiu", "Cosmin", "Gheorghe", "Viorel", "Tatiana", "Nina"};
+        List<String> studentsArrayAsList = Arrays.asList(students);
+        studentList.addAll(studentsArrayAsList);
         graduateStudentList.addAll(studentList);
 
-      for(String gradStudent : graduateStudentList){
-          System.out.println(gradStudent);
-      }
+        for (String gradStudent : graduateStudentList) {
+            System.out.println(gradStudent);
+        }
     }
 }
