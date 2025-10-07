@@ -11,14 +11,17 @@ public class Main {
 //      implement a linear search method to find whether a given movie title exists.
 //      If it does, print out its position in the array.
         Scanner sc = new Scanner(System.in);
+        System.out.println("Please introduce your movie title:");
         String userInput = sc.nextLine();
         searchingMovieTitle(userInput, movies);
+        sc.close();
     }
 
     public static void searchingMovieTitle(String title, String[] movies) {
-        ArrayList<String> moviesArrList = new ArrayList<>(Arrays.asList(movies));
-        if (moviesArrList.contains(title)) {
-            System.out.println(moviesArrList.indexOf(title));
+        for(int i = 0; i< movies.length; i++){
+          if(movies[i].equalsIgnoreCase(title)){
+              System.out.println("The position of " +title+ " inside the array is " + i);
+          }
         }
     }
 }

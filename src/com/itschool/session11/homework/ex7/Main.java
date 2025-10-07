@@ -14,8 +14,7 @@ public class Main {
         fruits.add("banane");
         fruits.add("ananas");
 
-        ArrayList<String> sizeSortedArrList = customSort(fruits);
-
+       customSort(fruits);
     }
 
     public static ArrayList<String> customSort(ArrayList<String> arr) {
@@ -42,9 +41,7 @@ public class Main {
         char[] word2CharsArr = word2.toLowerCase().toCharArray();
         ArrayList<String> abSortElements = new ArrayList<>();
         for (int i = 0; i < word1.length() - 1; i++) {
-            if (word1CharsArr[i] == word2CharsArr[i]) {
-                continue;
-            } else if (word1CharsArr[i] > word2CharsArr[i]) {
+           if (word1CharsArr[i] > word2CharsArr[i]) {
                 abSortElements.add(word2);
                 abSortElements.add(word1);
                 break;
